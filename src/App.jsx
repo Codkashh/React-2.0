@@ -7,7 +7,11 @@
 //import UseEffectChallenge from "./components/useEffectHook/UseEffectChallenge";
 //import CounterEffect from "./components/useEffectHook/CounterEffect"
 //import FetchDataEffect from "./components/useEffectHook/FetchDataEffect"
-import ComponentA from "./components/Propdrilling/ComponentA"
+//import ComponentA from "./components/Propdrilling/ComponentA"
+import { createContext } from "react"
+import ComponentA from "./components/ContextAPI/ComponentA";
+
+export const Data = createContext();
 const App = () => {
   const name = "Akash"
   return (
@@ -21,7 +25,11 @@ const App = () => {
       {/*<UseEffectChallenge />*/}
       {/*<CounterEffect />*/}
       {/*<FetchDataEffect />*/}
-      <ComponentA name={name} />
+      {/*<ComponentA name={name} />*/}
+      
+      <Data.Provider value={name}>
+        <ComponentA />
+      </Data.Provider>
     </div>
   )
 }
