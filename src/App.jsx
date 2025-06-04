@@ -10,9 +10,13 @@
 //import ComponentA from "./components/Propdrilling/ComponentA"
 //import { createContext } from "react"
 //import ComponentA from "./components/ContextAPI/ComponentA";
-import Counter from "./components/useReducer/Counter";
-
 //export const Data = createContext();
+//import Counter from "./components/useReducer/Counter";
+
+import FocusInput from "./components/useRef/FocusInput"
+import Timer from "./components/useRef/Timer"
+
+
 const App = () => {
   const name = "Akash"
   return (
@@ -31,7 +35,9 @@ const App = () => {
       {/*<Data.Provider value={name}>
         <ComponentA />
       </Data.Provider>*/}
-      <Counter />
+      {/*<Counter />*/}
+      <FocusInput />
+      <Timer />
     </div>
   )
 }
